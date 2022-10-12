@@ -8,15 +8,22 @@
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
     
     <title>HPlus Sport</title>
+    
+    <!-- STYLESHEET -->
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- JQUERY -->
     <script src="./jquery-3.0.0.js"></script>
+    
     <script>
+        // change background color of product names when hovering over product images in product section
         $(function () {
             $("#products h2.product-name[data-type='mineralwater']").css("background-color", "#2982D0");
             $("#products h2.product-name[data-type='vitamin']").css("background-color", "#12500F");
             $("#products h2.product-name[data-type='proteinbar']").css("background-color", "#4E0F50");
-
+        
+        // filter products by product category checkboxes
             document.querySelector('#cbVitamins').addEventListener('change',function (evt) {
                 updateProductView("vitamins", evt.target.checked);
             });
@@ -52,6 +59,7 @@
                 dataSelectorVal = "h2[data-type='proteinbar']";
                 break;
             }
+            
             // use the has() function to select the li tags that are product items
             // that contain the h2 tag with the corresponding data attribute value
             $(".product-item").has(dataSelectorVal).css('display', bVisible ? "" : "none");
