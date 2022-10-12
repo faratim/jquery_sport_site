@@ -3,10 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    
+    <!-- FAVICON -->
+    <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+    
     <title>HPlus Sport</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../jquery-3.0.0.js"></script>
+    <script src="./jquery-3.0.0.js"></script>
     <script>
         $(function () {
             $("#products h2.product-name[data-type='mineralwater']").css("background-color", "#2982D0");
@@ -87,7 +91,7 @@
         <div class="container">
             <div class="text-content">
                 <h2 class="headline">Company History</h2>
-                <p>In 2006, H+ Sport founder <a href="#employees-henrytwill">Henry Twill</a> set out to create supplements and nutritional products made from the <em>purest ingredients</em> and backed by scientific and <em>performance data</em> – to provide a strong basis of <em>trust and accountability</em>.</p>
+                <p>In 2006, H+ Sport founder <a href="#people">Henry Twill</a> set out to create supplements and nutritional products made from the <em>purest ingredients</em> and backed by scientific and <em>performance data</em> – to provide a strong basis of <em>trust and accountability</em>.</p>
                 <p>His quest began while training for his <em>first 5K marathon</em>, after recovering from a <em>lengthy injury</em> that left him with residual aches, pains, and decreased athletic performance. He yearned for <em>simple and natural ingredients</em>, in their purest form, instead of labels with <em>lengthy chemical names</em> and disclaimers. When no products lived up to his strict requirements, Henry set his sights on <em>creating products</em> that catered to his own vision.</p>
                 <p>Today that vision has become H+ Sport…offering a variety of <a href="#products">supplements, energy bars and rehydration solutions</a>. At the foundation of H+ Sports are products backed by scientific and performance data.</p>
             </div>
@@ -105,16 +109,14 @@
         <!-- container -->
         <div id="productControls">
             <form>
-                <div>
-                    <span>Show: </span>
-                    <input id="cbVitamins" type="checkbox" checked="checked" />
-                    <label for="cbVitamins">Vitamins </label>
-                    <input id="cbMineralWater" type="checkbox" checked="checked" />
-                    <label for="cbMineralWater">Mineral Water </label>
-                    <input id="cbProtein" type="checkbox" checked="checked" />
-                    <label for="cbProtein">Protein Bars </label>
+                <div class="show">
+                  <script>
+                    $(".show").append("<span> Show: </span><input type='checkbox' id='cbVitamins' checked='checked' /><span> Vitamins </span>");
+                    $(".show").append("<input type='checkbox' id='cbMineralWater' checked='checked' /><span> Mineral Water </span>");
+                    $(".show").append("<input type='checkbox' id='cbProtein' checked='checked' /><span> Protein Bars </span>");
+                  </script>
                 </div>
-            </form>
+              </form>
         </div>
         <ul class="product-list">
             <li class="product-item" data-prod_id="V-A1037">
